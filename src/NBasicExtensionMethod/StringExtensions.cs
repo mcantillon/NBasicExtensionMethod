@@ -86,7 +86,11 @@
 
         public static bool IsWebUrl(this string target)
         {
-            return !string.IsNullOrEmpty(target) && WebUriExpression.IsMatch(target);
+            bool bReturnValue = false;
+
+            bReturnValue = !string.IsNullOrEmpty(target) && WebUriExpression.IsMatch(target);
+            
+            return bReturnValue;
         }
 
         public static bool IsEmail(this string target)
@@ -282,7 +286,7 @@
 
         public static string WithCapitalizedFirstLetter(this string s)
         {
-            if (s.IsNotNullOrWhiteSpace())
+            if (s.IsNullOrWhiteSpace())
             {
                 throw new Exception("String to capitalize is empty.");
             }
