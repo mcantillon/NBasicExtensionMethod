@@ -30,7 +30,8 @@ namespace NBasicExtensionMethod.Test.Fast
         [TestCase(false, true, false)]
         [TestCase(false, false, false)]
         public void And_Should_Return_False_When_One_Value_Is_False(bool bValueA, bool bValueB, bool bExpectedResult)
-			// Arrange
+		{
+            // Arrange
           
 			// Act & Assert
             bValueA.And(bValueB).Should().Be(bExpectedResult);
@@ -42,7 +43,8 @@ namespace NBasicExtensionMethod.Test.Fast
         [TestCase(true, true, true)]
         [TestCase(false, false, false)]
         public void Or_Should_Return_True_When_One_Value_Is_True(bool bValueA, bool bValueB, bool bExpectedResult)
-			// Arrange
+		{
+            // Arrange
 
 			// Act & Assert
             bValueA.Or(bValueB).Should().Be(bExpectedResult);
@@ -52,6 +54,7 @@ namespace NBasicExtensionMethod.Test.Fast
         [TestCase(true, false)]    
         [TestCase(false, true)]    
         public void Not_ReturnsOppositeOfPassedValue(bool bValueA, bool bExpectedResult)
+        {
             bValueA.Not().Should().Be(bExpectedResult);
         }
 
@@ -71,6 +74,7 @@ namespace NBasicExtensionMethod.Test.Fast
         [TestCase(true, false, false)]
         [TestCase(false, true, false)]
         public void XNOr_WhenValuesAreTheSame_ReturnsTrue(bool bValueA, bool bValueB, bool bExpectedResult)
+        {
             bValueA.XNOr(bValueB).Should().Be(bExpectedResult);
         }
 

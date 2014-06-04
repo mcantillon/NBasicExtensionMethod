@@ -86,10 +86,6 @@ namespace NBasicExtensionMethod
 
 		public static bool IsWebUrl(this string target) {
 			return !string.IsNullOrEmpty(target) && WebUriExpression.IsMatch(target);
-
-            bReturnValue = !string.IsNullOrEmpty(target) && WebUriExpression.IsMatch(target);
-            
-            return bReturnValue;
 		}
 
 		public static bool IsEmail(this string target) {
